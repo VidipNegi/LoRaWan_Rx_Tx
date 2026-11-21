@@ -6,10 +6,10 @@ A long-range LoRa sensor link that sends air, soil and vibration readings from a
 |---|---|
 | Type | B.Tech minor project, 2025 |
 | Radio | LoRa, 433 MHz, point to point |
-| Builds | Industrial-style STM32F4 build, and an ATmega328P prototype (code in this repo) |
+| Builds | Industrial-style STM32F4 build (tested, firmware not in this repo), and an ATmega328P prototype (code in this repo) |
 | Tested range | About 0.7 km (433 MHz prototype) |
 | Use cases | Agricultural early-warning and landslide early-warning |
-| Status | Prototype working. STM32F4 firmware not in this repo |
+| Status | Prototype working. The STM32F4 build was tested, but its firmware is not in this repo |
 
 ## Why it exists
 
@@ -17,13 +17,13 @@ Fields and hillsides are often outside Wi-Fi and mobile coverage. Soil temperatu
 
 ## Two builds
 
-**Industrial-style build (STM32F4).** This is the stronger build from an industrial point of view.
+**Industrial-style build (STM32F4).** This build was designed in an industrial style.
 
 * STM32F4-based transmitter and receiver nodes using the LoRa E220 module for long-range, low-power communication
 * Packet framing to keep telemetry reliable over a constrained bandwidth
 * A DWIN HMI at the receiver for live data display and user interaction
 
-It was built and tested. Its firmware is not in this repo.
+It was built and tested. Its firmware is not included in this repo.
 
 **Prototype build (ATmega328P, Arduino, this repo).** The code here is the prototype. It uses the same idea on simpler hardware, and the range figure above was measured on it.
 
